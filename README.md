@@ -1,13 +1,15 @@
 ### ethereum_tester-vm
-Docker file for a quick test setup for ethereum testing
+Docker file for a quick testing setup for ethereum 
 
 to build:
 ````
-
+docker build -t "ether_test" .
 ```
 
-to run :
+to run a proper shell :
 ````
-
+docker run -t -i --entrypoint=/bin/bash -v $PWD/storage/:/data ether_test
 ```
 
+
+come with ipython, geth, eth, pyethereum
